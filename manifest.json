@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Stereotweet",
+  "version": "1.0.0",
+  "description": "Sends tweet data to the Gemini API and displays an analysis.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://x.com/*", "https://twitter.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["plane.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

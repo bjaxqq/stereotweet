@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Stereotweet Settings</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            :root {
+                --bg: #ffffff;
+                --bg-secondary: #f7f9f9;
+                --text-primary: #0f1419;
+                --text-secondary: #536471;
+                --border: #cfd9de;
+                --accent: #1d9bf0;
+                --accent-hover: #1a8cd8;
+                --success: #00ba7c;
+                --icon-bg: #e7e9ea;
+
+                @media (prefers-color-scheme: dark) {
+                    --bg: #15202b;
+                    --bg-secondary: #192734;
+                    --text-primary: #e7e9ea;
+                    --text-secondary: #8b98a5;
+                    --border: #38444d;
+                    --icon-bg: #273340;
+                }
+            }
+
+            body {
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    "Segoe UI",
+                    Roboto,
+                    "Helvetica Neue",
+                    sans-serif;
+                font-size: 15px;
+                background-color: var(--bg);
+                color: var(--text-primary);
+                margin: 0;
+                width: 320px;
+            }
+
+            .container {
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .header {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+            .header img {
+                width: 40px;
+                height: 40px;
+                border-radius: 6px;
+                background-color: var(--icon-bg);
+            }
+            .header h1 {
+                font-size: 20px;
+                font-weight: 700;
+                margin: 0;
+                color: var(--text-primary);
+            }
+
+            .description {
+                font-size: 14px;
+                line-height: 1.4;
+                color: var(--text-secondary);
+                margin: 0;
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+            .form-group label {
+                font-weight: 600;
+                font-size: 14px;
+            }
+            .form-group input[type="password"] {
+                background-color: var(--bg);
+                border: 1px solid var(--border);
+                border-radius: 6px;
+                padding: 10px;
+                font-size: 14px;
+                color: var(--text-primary);
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .form-group input[type="password"]:focus {
+                outline: 2px solid var(--accent);
+                border-color: var(--accent);
+            }
+            .form-group input[type="password"]::placeholder {
+                color: var(--text-secondary);
+            }
+
+            .button {
+                background-color: var(--accent);
+                color: #ffffff;
+                border: none;
+                border-radius: 9999px;
+                padding: 10px 16px;
+                font-size: 15px;
+                font-weight: 700;
+                cursor: pointer;
+                text-align: center;
+                transition: background-color 0.2s;
+            }
+            .button:hover {
+                background-color: var(--accent-hover);
+            }
+
+            #status {
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--success);
+                text-align: center;
+                min-height: 20px;
+            }
+
+            .footer {
+                border-top: 1px solid var(--border);
+                padding-top: 16px;
+                text-align: center;
+            }
+            .footer a {
+                color: var(--accent);
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .footer a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="icons/icon-48.png" alt="Stereotweet Icon" />
+                <h1>Stereotweet</h1>
+            </div>
+
+            <p class="description">
+                Analyzes the political leaning of a tweet and displays it on a
+                political compass.
+            </p>
+
+            <div class="form-group">
+                <label for="apiKey">Gemini API Key</label>
+                <input
+                    type="password"
+                    id="apiKey"
+                    placeholder="API Key is not set"
+                />
+            </div>
+
+            <button id="save" class="button">Save Key</button>
+            <div id="status"></div>
+
+            <div class="footer">
+                <a href="https://github.com/bjaxqq/stereotweet" target="_blank">
+                    View on GitHub &rarr;
+                </a>
+            </div>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>

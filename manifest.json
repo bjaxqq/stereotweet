@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Stereotweet",
   "version": "1.0.0",
-  "description": "Sends tweet data to the Gemini API and displays an analysis.",
-  "permissions": ["activeTab", "scripting"],
+  "description": "Analyzes the political leaning of a tweet and displays it on a political compass.",
+  "permissions": ["storage"],
   "host_permissions": ["https://x.com/*", "https://twitter.com/*"],
   "background": {
     "service_worker": "background.js"
@@ -11,14 +11,23 @@
   "content_scripts": [
     {
       "matches": ["https://x.com/*", "https://twitter.com/*"],
-      "js": ["content.js"],
-      "run_at": "document_start"
+      "js": ["content.js"]
     }
   ],
-  "web_accessible_resources": [
-    {
-      "resources": ["plane.png"],
-      "matches": ["<all_urls>"]
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "64": "icons/icon-64.png",
+    "128": "icons/icon-128.png",
+    "256": "icons/icon-256.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
     }
-  ]
+  }
 }

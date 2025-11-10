@@ -24,6 +24,59 @@ This project provides a tool for users on X (formerly Twitter) to get an immedia
 - **Efficient Caching**: Analyzed tweets are cached in `chrome.storage.local` for 24 hours to prevent redundant API calls and provide instant results on subsequent clicks.
 - **Style-Safe Injection**: Uses a Shadow DOM to inject the analysis card, preventing CSS conflicts with X's main website.
 
+---
+
+## Installation
+
+There are two ways to install Stereotweet. The "Stable Release" method is recommended for most users.
+
+### 1. Installation (Stable Release)
+
+This method is the easiest and uses the official `v1.0.0` release.
+
+1.  Go to the [**Releases Page**](https://github.com/bjaxqq/stereotweet/releases) on GitHub.
+2.  Download the `stereotweet-v1.0.0.zip` file from the latest release.
+3.  **Unzip the file** on your computer (you'll get a folder named `stereotweet` or similar).
+4.  Open Chrome and navigate to `chrome://extensions`.
+5.  Enable **Developer mode** in the top-right corner.
+6.  Click **Load unpacked**.
+7.  Select the folder you unzipped in step 3.
+8.  Once loaded, follow the **[Setup](#setup)** instructions below.
+
+### 2. Installation (For Developers)
+
+This method is for developers who want to clone the repository to view or modify the code.
+
+1.  **Clone the Repository**:
+    ```bash
+    git clone [https://github.com/bjaxqq/stereotweet.git](https://github.com/bjaxqq/stereotweet.git)
+    cd stereotweet
+    ```
+2.  **Load in Chrome**:
+    - Open Chrome and navigate to `chrome://extensions`.
+    - Enable **Developer mode** in the top-right corner.
+    - Click **Load unpacked**.
+    - Select the `stereotweet` project folder you just cloned.
+3.  Follow the **[Setup](#setup)** instructions below.
+
+---
+
+## Setup (Required)
+
+After installing the extension, you must add your own Google Gemini API key.
+
+1.  **Get a Gemini API Key**:
+    - Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and create an API key.
+    - Ensure the "Generative Language API" is enabled in your Google Cloud project.
+
+2.  **Set Your API Key**:
+    - Click the new Stereotweet icon in your Chrome toolbar.
+    - Paste your Gemini API key into the text field and click **Save Key**.
+
+3.  **Run**: Navigate to `x.com` to see it in action!
+
+---
+
 ## Technologies Used
 
 - **Extension & Frontend**:
@@ -51,27 +104,3 @@ This project provides a tool for users on X (formerly Twitter) to get an immedia
 5.  **Generate Image**: The service worker uses the `OffscreenCanvas` API to load the base `plane.png` image, draw a red dot at the AI-provided coordinates, and export the new image as a Base64 string.
 
 6.  **Display & Cache**: The final image and text are sent back to the content script, which injects the analysis card into the page. The successful result is then saved to `chrome.storage.local` with a 24-hour timestamp.
-
-## Installation and Setup
-
-1.  **Get a Gemini API Key**:
-    - Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and create an API key.
-    - Ensure the "Generative Language API" is enabled in your Google Cloud project.
-
-2.  **Clone the Repository**:
-    ```bash
-    git clone [https://github.com/bjaxqq/stereotweet.git](https://github.com/bjaxqq/stereotweet.git)
-    cd stereotweet
-    ```
-
-3.  **Load in Chrome**:
-    - Open Chrome and navigate to `chrome://extensions`.
-    - Enable **Developer mode** in the top-right corner.
-    - Click **Load unpacked**.
-    - Select the `stereotweet` project folder (the one containing `manifest.json`).
-
-4.  **Set Your API Key**:
-    - Click the new Stereotweet icon in your Chrome toolbar.
-    - Paste your Gemini API key into the text field and click **Save Key**.
-
-5.  **Run**: Navigate to `x.com` to see it in action!

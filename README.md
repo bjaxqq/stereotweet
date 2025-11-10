@@ -4,6 +4,9 @@ Ever see a post and aren’t sure of its politics? Never again.
 
 Stereotweet is a browser extension that analyzes the political leaning of a tweet and displays the result on a political compass, right in your timeline. It uses the Google Gemini AI to analyze the tweet's text and metadata.
 
+![Screenshot 1](github/screen1.png)
+![Screenshot 2](github/screen2.png)
+
 ## Contributors
 
 [Brooks Jackson](https://github.com/bjaxqq)

@@ -35,12 +35,14 @@ There are three ways to install Stereotweet. The easiest method is by going to e
 
 ### 1. Installation (Webstore)
 
+This method is the easiest for any general user.
+
 [Chrome Webstore](https://chromewebstore.google.com/detail/dbnnnikgcfjpflhkbchjggpikddhndbo?utm_source=item-share-cb)
 [Firefox Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/stereotweet/)
 
 ### 2. Installation (Stable Release)
 
-This method is the easiest and uses the official `v1.0.0` release.
+This method is for those who want their extension to be localized and uses the official `v1.0.0` release.
 
 1.  Go to the [**Releases Page**](https://github.com/bjaxqq/stereotweet/releases) on GitHub.
 2.  Download the `stereotweet-v1.0.0.zip` file from the latest release.

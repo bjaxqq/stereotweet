@@ -31,9 +31,14 @@ This project provides a tool for users on X (formerly Twitter) to get an immedia
 
 ## Installation
 
-There are two ways to install Stereotweet. The "Stable Release" method is recommended for most users.
+There are three ways to install Stereotweet. The easiest method is by going to either the Chrome or Firefox store and installing through there.
 
-### 1. Installation (Stable Release)
+### 1. Installation (Webstore)
+
+[Chrome Webstore](https://chromewebstore.google.com/detail/dbnnnikgcfjpflhkbchjggpikddhndbo?utm_source=item-share-cb)
+[Firefox Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/stereotweet/)
+
+### 2. Installation (Stable Release)
 
 This method is the easiest and uses the official `v1.0.0` release.
 
@@ -46,7 +51,7 @@ This method is the easiest and uses the official `v1.0.0` release.
 7.  Select the folder you unzipped in step 3.
 8.  Once loaded, follow the **[Setup](#setup)** instructions below.
 
-### 2. Installation (For Developers)
+### 3. Installation (For Developers)
 
 This method is for developers who want to clone the repository to view or modify the code.
 
